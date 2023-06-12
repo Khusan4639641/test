@@ -144,7 +144,8 @@
                     $('#loadingIndicator').show();
                 },
                 success: function(response) {
-                    if (response.length > 0) {
+                    if (response[0].data.length > 0) {
+                        $('#notFoundMessage').hide();
                         displayData(response[0].data);
                     } else {
                         displayNotFoundMessage();
